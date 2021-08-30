@@ -30,7 +30,7 @@ function App() {
             </Heading>
             <Categories />
             <Box textAlign="center" mt="200px !important">
-              <Link href="https://github.com/arubua/inventory-mgt" isExternal>
+              <Link href="https://github.com/arubua/chucknorris" isExternal>
                 <Button
                   colorScheme="orange"
                   fontSize="sm"
