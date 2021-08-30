@@ -2,7 +2,6 @@ import React from 'react';
 import {
   ChakraProvider,
   Box,
-  Center,
   theme,
   Heading,
   VStack,

@@ -1,14 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import {
-  Box,
-  HStack,
-  Image,
-  Text,
-  Center,
-  VStack,
-  Flex,
-  Link,
-} from '@chakra-ui/react';
+import { Box, HStack, Image, Text, VStack, Link } from '@chakra-ui/react';
 import axios from 'axios';
 import { ExternalLinkIcon, RepeatIcon } from '@chakra-ui/icons';
 
