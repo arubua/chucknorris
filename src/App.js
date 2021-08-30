@@ -2,38 +2,47 @@ import React from 'react';
 import {
   ChakraProvider,
   Box,
-  Text,
-  Link,
-  VStack,
-  Code,
-  Grid,
+  Center,
   theme,
+  Heading,
+  VStack,
+  Link,
+  Button,
 } from '@chakra-ui/react';
+import { AiFillGithub } from 'react-icons/ai';
 import { ColorModeSwitcher } from './ColorModeSwitcher';
-import { Logo } from './Logo';
+
+import Categories from './components/Categories';
 
 function App() {
   return (
     <ChakraProvider theme={theme}>
-      <Box textAlign="center" fontSize="xl">
-        <Grid minH="100vh" p={3}>
-          <ColorModeSwitcher justifySelf="flex-end" />
-          <VStack spacing={8}>
-            <Logo h="40vmin" pointerEvents="none" />
-            <Text>
-              Edit <Code fontSize="xl">src/App.js</Code> and save to reload.
-            </Text>
-            <Link
-              color="teal.500"
-              href="https://chakra-ui.com"
-              fontSize="2xl"
-              target="_blank"
-              rel="noopener noreferrer"
+      <Box fontSize="xl">
+        <Box>
+          <VStack>
+            <ColorModeSwitcher mt=".5em" />
+            <Heading
+              mt=".5em"
+              color="orange.400"
+              fontWeight="bold"
+              fontSize={['4xl', '4xl', '6xl', '6xl']}
             >
-              Learn Chakra
-            </Link>
+              CHUKNORRIS.IO
+            </Heading>
+            <Categories />
+            <Box textAlign="center" mt="200px !important">
+              <Link href="https://github.com/arubua/inventory-mgt" isExternal>
+                <Button
+                  colorScheme="orange"
+                  fontSize="sm"
+                  leftIcon={<AiFillGithub />}
+                >
+                  Open in Github
+                </Button>
+              </Link>
+            </Box>
           </VStack>
-        </Grid>
+        </Box>
       </Box>
     </ChakraProvider>
   );
